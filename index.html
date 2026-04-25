@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CPCB Certified Biodegradable Eco-Products Manufacturer. 100% Compostable Carry Bags." />
+  <title>Sai Vedha Eco — Certified Biodegradable Products</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,600;0,700;0,900;1,300&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --green-deep:   #163d1f;
+      --green-mid:    #2a6b3c;
+      --green-bright: #3a9e56;
+      --green-light:  #d4edda;
+      --green-pale:   #f0f8f2;
+      --cream:        #faf8f3;
+      --white:        #ffffff;
+      --text-dark:    #111b14;
+      --text-mid:     #3a4d3e;
+      --text-light:   #6b7f70;
+      --shadow-soft:  0 4px 30px rgba(22,61,31,0.10);
+      --shadow-card:  0 2px 16px rgba(22,61,31,0.08);
+      --radius-lg:    20px;
+      --radius-md:    14px;
+      --radius-sm:    10px;
+      --wa-green:     #25D366;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    * { -webkit-tap-highlight-color: transparent; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    /* POPUP */
+    #cert-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(10,30,15,0.65); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 20px; animation: overlayFadeIn 0.5s ease forwards; }
+    #cert-overlay.fade-out { animation: overlayFadeOut 0.6s ease forwards; }
+    @keyframes overlayFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes overlayFadeOut { from { opacity: 1; } to { opacity: 0; } }
+    #cert-popup { background: var(--white); border-radius: var(--radius-lg); max-width: 360px; width: 100%; padding: 32px 28px 28px; box-shadow: 0 24px 64px rgba(22,61,31,0.28); position: relative; text-align: center; animation: popupSlideUp 0.55s cubic-bezier(0.34,1.56,0.64,1) forwards; border: 1.5px solid rgba(58,158,86,0.15); }
+    @keyframes popupSlideUp { from { opacity: 0; transform: translateY(40px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    #cert-close { position: absolute; top: 14px; right: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--green-pale); border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; color: var(--text-mid); transition: background 0.2s, color 0.2s; }
+    #cert-close:hover { background: var(--green-light); color: var(--green-deep); }
+    .cert-logo-wrap { width: 56px; height: 56px; border-radius: 14px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 6px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0; }
+    .cert-logo-wrap img { width: 100%; height: 100%; object-fit: contain; }
+    .cert-brand { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; text-align: left; }
+    .cert-brand-text { display: flex; flex-direction: row; align-items: center; gap: 6px; }
+    .brand-main { font-family: 'Fraunces', serif; font-size: 1.2rem; font-weight: 700; color: #163d1f; }
+    .cert-badge-line { display: inline-flex; align-items: center; gap: 6px; background: var(--green-pale); border: 1px solid var(--green-light); border-radius: 100px; padding: 5px 14px; font-size: 11px; font-weight: 600; color: var(--green-mid); letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 14px; }
+    .cert-badge-line span { width: 7px; height: 7px; border-radius: 50%; background: var(--green-bright); display: inline-block; }
+    #cert-popup h2 { font-family: 'Fraunces', serif; font-size: 1.4rem; font-weight: 700; color: var(--green-deep); margin-bottom: 8px; line-height: 1.3; letter-spacing: -0.3px; }
+    #cert-popup p { font-size: 0.875rem; color: var(--text-light); margin-bottom: 22px; line-height: 1.6; }
+    .cert-image-box { background: linear-gradient(135deg, var(--green-pale), var(--green-light)); border-radius: var(--radius-md); height: 110px; margin-bottom: 22px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px dashed var(--green-bright); gap: 8px; position: relative; overflow: hidden; margin-left: auto; margin-right: auto; max-width: 280px; }
+    .cert-image-box img { width: 100%; height: 100%; object-fit: contain; position: relative; border-radius: 8px; }
+    .cert-btn-primary { display: block; width: 100%; padding: 14px; background: linear-gradient(135deg, #3a9e56, #163d1f); box-shadow: 0 8px 24px rgba(22,61,31,0.25), inset 0 1px 0 rgba(255,255,255,0.2); color: white; border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; border: none; cursor: pointer; margin-bottom: 10px; letter-spacing: 0.02em; transition: opacity 0.2s, transform 0.15s; }
+    .cert-btn-primary:active { transform: scale(0.96); }
+    .cert-timer-bar { height: 3px; background: var(--green-light); border-radius: 100px; overflow: hidden; margin-top: 8px; }
+    .cert-timer-fill { height: 100%; width: 100%; background: linear-gradient(90deg, var(--green-bright), var(--green-mid)); border-radius: 100px; animation: timerDrain 5s linear forwards; }
+    @keyframes timerDrain { from { width: 100%; } to { width: 0%; } }
+    .cert-timer-label { font-size: 10.5px; color: var(--text-light); text-align: right; margin-top: 6px; }
+    .cert-full-view { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 9999; }
+    .cert-full-view img { width: 90%; max-height: 90%; object-fit: contain; border-radius: 10px; }
+    .cert-close { position: absolute; top: 20px; right: 20px; font-size: 24px; color: white; cursor: pointer; }
+
+    /* NAV */
+    #top-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,243,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(58,158,86,0.12); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; transition: box-shadow 0.3s; }
+    #top-nav.scrolled { box-shadow: 0 4px 20px rgba(22,61,31,0.10); }
+    .nav-brand { display: flex; align-items: center; gap: 10px; font-family: 'Fraunces', serif; font-size: 20px; font-weight: 700; color: var(--green-deep); letter-spacing: 0.3px; }
+    .nav-brand-icon { width: 42px; height: 42px; background: transparent; box-shadow: none; }
+    .nav-wa-btn { display: flex; align-items: center; gap: 6px; background: var(--wa-green); color: white; padding: 8px 14px; border-radius: 100px; font-size: 0.8rem; font-weight: 600; box-shadow: 0 2px 12px rgba(37,211,102,0.30); transition: transform 0.15s; }
+    .nav-wa-btn:active { transform: scale(0.97); }
+    .nav-wa-btn svg { width: 16px; height: 16px; fill: white; }
+
+    /* HERO */
+    #hero { min-height: 100svh; padding: 90px 24px 60px; background: var(--cream); position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: center; }
+    .hero-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: 0.25; pointer-events: none; }
+    .blob-1 { width: 280px; height: 280px; background: var(--green-bright); top: -80px; right: -60px; }
+    .blob-2 { width: 200px; height: 200px; background: #a8e6b8; bottom: 60px; left: -60px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 7px; background: rgba(58,158,86,0.1); border: 1px solid rgba(58,158,86,0.25); border-radius: 100px; padding: 6px 14px; font-size: 11px; font-weight: 600; color: var(--green-mid); letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 20px; width: fit-content; }
+    .hero-eyebrow::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--green-bright); animation: pulse 2s infinite; }
+    @keyframes pulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.4); opacity: 0.6; } }
+    .hero-heading { font-family: 'Fraunces', serif; font-size: clamp(2.2rem,8vw,3.2rem); font-weight: 900; line-height: 1.1; color: var(--green-deep); margin-bottom: 16px; letter-spacing: -0.02em; }
+    .hero-heading em { font-style: italic; font-weight: 300; color: var(--green-bright); }
+    .hero-sub { font-size: 1rem; color: var(--text-mid); line-height: 1.65; margin-bottom: 30px; max-width: 340px; }
+    .hero-trust-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .trust-chip { display: flex; align-items: center; gap: 5px; background: var(--white); border: 1px solid rgba(58,158,86,0.20); border-radius: 100px; padding: 6px 12px; font-size: 11.5px; font-weight: 500; color: var(--text-mid); box-shadow: var(--shadow-card); }
+    .trust-chip svg { width: 13px; height: 13px; color: var(--green-bright); }
+    .hero-ctas { display: flex; flex-direction: column; gap: 8px; margin-bottom: 36px; }
+    .btn-wa { display: flex; align-items: center; justify-content: center; gap: 10px; background: var(--wa-green); color: white; padding: 17px 24px; border-radius: var(--radius-md); font-weight: 600; font-size: 1rem; box-shadow: 0 8px 28px rgba(37,211,102,0.35); }
+    .btn-wa:active { box-shadow: 0 4px 14px rgba(37,211,102,0.25); }
+    .btn-wa svg { width: 22px; height: 22px; fill: white; }
+    .btn-outline { display: flex; align-items: center; justify-content: center; gap: 8px; border: 1.5px solid var(--green-mid); color: var(--green-deep); padding: 15px 24px; border-radius: var(--radius-md); font-weight: 500; font-size: 0.95rem; background: transparent; transition: background 0.2s; }
+    .btn-outline:active { background: var(--green-pale); }
+    .btn-outline svg { width: 18px; height: 18px; }
+
+     /* HERO IMAGE / COMPLIANCE CARD */
+    .hero-image-wrap{position:relative;border-radius:var(--radius-lg);overflow:hidden;height:220px;box-shadow:var(--shadow-soft);backdrop-filter: blur(8px);background: rgba(255,255,255,0.4); }
+    .compliance-card{display:flex;align-items:center;justify-content:space-between;width:100%;height:100%;padding:12px 14px;background:linear-gradient(135deg, #d4edda, #a8e6b8);cursor:pointer;text-decoration:none;color:inherit;border:1px;transition:transform 0.22s cubic-bezier(0.4,0,0.2,1),box-shadow 0.22s,background 0.22s;position:relative;overflow:hidden;}
+    .compliance-card::before{content:'';position:absolute;top:-30px;right:-30px;width:140px;height:140px;border-radius:50%;background:radial-gradient(circle,rgba(58,158,86,0.13) 0%,transparent 70%);pointer-events:none;}
+    .compliance-card::after{content:'';position:absolute;bottom:-20px;left:-20px;width:100px;height:100px;border-radius:50%;background:radial-gradient(circle,rgba(58,158,86,0.08) 0%,transparent 70%);pointer-events:none;}
+    @media(hover:hover){.compliance-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(42,107,60,0.16);background:linear-gradient(135deg,#f0f9f2 0%,#e2f5e8 60%,#d0eddb 100%);}}
+    .compliance-card:active{transform:scale(0.97);box-shadow:0 4px 14px rgba(42,107,60,0.10);}
+    .compliance-left{display:flex;align-items:center;gap:16px;flex:1;position:relative;}
+    .compliance-icon-wrap{width:52px;height:52px;border-radius:14px;background:linear-gradient(145deg,#ffffff,#f0faf3);box-shadow:0 4px 14px rgba(42,107,60,0.14),inset 0 1px 0 rgba(255,255,255,0.9);display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(58,158,86,0.15);}
+    .compliance-icon-wrap svg{width:26px;height:26px;color:var(--green-mid);}
+    .compliance-text{flex:1;}
+    .compliance-label{display:inline-flex;align-items:center;gap:5px;background:rgba(58,158,86,0.10);border:1px solid rgba(58,158,86,0.20);border-radius:100px;padding:3px 9px;font-size:9.5px;font-weight:700;color:var(--green-mid);letter-spacing:0.07em;text-transform:uppercase;margin-bottom:7px;}
+    .compliance-label::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--green-bright);}
+    .compliance-title{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:700;color:var(--green-deep);line-height:1.25;margin-bottom:5px;letter-spacing:-0.01em;}
+    .compliance-subtitle{font-size:0.73rem;color:var(--text-light);line-height:1.5;max-width:190px;}
+    .compliance-arrow{width:36px;height:36px;border-radius:50%;background:var(--green-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px rgba(22,61,31,0.25);transition:transform 0.22s,background 0.22s;margin-left:12px;}
+    .compliance-card:hover .compliance-arrow{transform:translateX(3px);background:var(--green-bright);}
+    .compliance-arrow svg{width:16px;height:16px;fill:none;stroke:white;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;}
+    .hero-image-wrap::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(
+            to bottom,
+            var(--cream),
+            transparent
+        );
+        z-index: 2;
+    }
+
+    /* SECTIONS */
+    section { padding: 64px 24px; }
+    .section-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green-bright); margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+    .section-eyebrow::before { content: ''; width: 24px; height: 2px; background: var(--green-bright); border-radius: 2px; }
+    .section-heading { font-family: 'Fraunces', serif; font-size: clamp(1.6rem,5.5vw,2.2rem); font-weight: 700; color: var(--green-deep); line-height: 1.2; margin-bottom: 8px; letter-spacing: -0.01em; }
+    .section-sub { font-size: 0.9rem; color: var(--text-light); line-height: 1.65; margin-bottom: 36px; max-width: 340px; }
+
+    /* CERTIFICATIONS — CLICKABLE */
+    #certifications { background: var(--white); scroll-margin-top: 18px; }
+    .cert-cards { display: flex; flex-direction: column; gap: 14px; }
+    .cert-card { background: var(--cream); border-radius: var(--radius-md); padding: 20px; display: flex; align-items: center; gap: 16px; border: 1px solid rgba(58,158,86,0.12); box-shadow: var(--shadow-card); transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s; cursor: pointer; text-decoration: none; color: inherit; }
+    .cert-card:active { transform: scale(0.96); box-shadow: 0 6px 18px rgba(0,0,0,0.15); }
+    .cert-card-icon { width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+    .cert-card-icon.green-grad { background: linear-gradient(135deg, var(--green-bright), var(--green-deep)); }
+    .cert-card-icon.blue-grad  { background: linear-gradient(135deg, #2980b9, #1a5276); }
+    .cert-card-icon.amber-grad { background: linear-gradient(135deg, #f39c12, #c0392b); }
+    .cert-card-icon svg { width: 26px; height: 26px; fill: white; }
+    .cert-card-body { flex: 1; }
+    .cert-card-body strong { display: block; font-size: 0.95rem; font-weight: 600; color: var(--text-dark); margin-bottom: 3px; }
+    .cert-card-body p { font-size: 0.8rem; color: var(--text-light); line-height: 1.5; }
+    .cert-card-badge { background: var(--green-pale); border: 1px solid var(--green-light); color: var(--green-mid); font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 4px 9px; border-radius: 100px; white-space: nowrap; }
+
+    /* IMPACT */
+    #impact { background: linear-gradient(160deg, var(--green-deep) 0%, #0e2914 100%); position: relative; overflow: hidden; text-align: center; }
+    #impact::before { content: ''; position: absolute; top: -40px; right: -40px; width: 200px; height: 200px; border-radius: 50%; background: rgba(58,158,86,0.15); filter: blur(40px); }
+    #impact::after { content: ''; position: absolute; bottom: -40px; left: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(168,230,184,0.08); filter: blur(30px); }
+    .impact-inner { position: relative; }
+    .impact-leaf-icon { width: 56px; height: 56px; margin: 0 auto 20px; border-radius: 50%; background: rgba(58,158,86,0.20); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(58,158,86,0.30); }
+    .impact-leaf-icon svg { width: 30px; height: 30px; fill: var(--green-bright); }
+    .impact-heading { font-family: 'Fraunces', serif; font-size: clamp(1.8rem,7vw,2.8rem); font-weight: 900; color: white; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.02em; }
+    .impact-heading em { font-style: italic; font-weight: 300; color: #90e8a8; }
+    .impact-sub { font-size: 0.925rem; color: rgba(255,255,255,0.65); line-height: 1.7; max-width: 320px; margin: 0 auto 36px; }
+    .impact-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .impact-stat-card { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.10); border-radius: var(--radius-md); padding: 18px 14px; backdrop-filter: blur(8px); }
+    .impact-stat-card .stat-num { font-family: 'Fraunces', serif; font-size: 1.8rem; font-weight: 700; color: var(--green-bright); display: block; line-height: 1; margin-bottom: 4px; }
+    .impact-stat-card .stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.55); line-height: 1.4; }
+
+    /* ============================================================
+       PRODUCTS — REDESIGNED: VERTICAL STACKED PREMIUM CARDS
+    ============================================================ */
+    #products { background: var(--cream); }
+    .products-stack { display: flex; flex-direction: column; gap: 20px;}
+
+    .pcard { background: var(--white); border-radius: 18px; overflow: hidden; box-shadow: 0 4px 24px rgba(22,61,31,0.09), 0 1px 4px rgba(22,61,31,0.06); border: 1px solid rgba(58,158,86,0.10); transition: transform 0.22s cubic-bezier(0.4,0,0.2,1), box-shadow 0.22s; }
+    .pcard:active { transform: scale(0.985); box-shadow: 0 2px 12px rgba(22,61,31,0.10); }
+
+    .pcard-img { width: 100%;aspect-ratio: 16/9; height: 215px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; padding: 0px; }
+    .pcard-img.c-green  { background: linear-gradient(145deg, #e2f5e7 0%, #c4e8cc 100%); }
+    .pcard-img.c-teal   { background: linear-gradient(145deg, #e0f4f1 0%, #b8e4de 100%); }
+    .pcard-img.c-olive  { background: linear-gradient(145deg, #edf3e0 0%, #d0e4b0 100%); }
+    .pcard-img.c-sage   { background: linear-gradient(145deg, #e8f0e6 0%, #c8dcc4 100%); }
+    .pcard-img.c-aurora { background: linear-gradient(145deg, #e4f0eb 0%, #b4d8c4 100%); }
+    .pcard-img::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.45) 0%, transparent 65%); pointer-events: none; }
+    .pcard-img::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            to bottom,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.15)
+        );
+    }
+
+    .pcard-img-badge { position: absolute; top: 12px; left: 12px; background: rgba(255,255,255,0.88); backdrop-filter: blur(6px); border-radius: 100px; padding: 4px 11px; font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: var(--green-deep); border: 1px solid rgba(58,158,86,0.18); }
+    .pcard-img-badge.hot { color: #b83c1f; border-color: rgba(184,60,31,0.20); }
+
+    .pcard-visual { position: relative; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 6px 14px rgba(22,61,31,0.14)); }
+    .pcard-visual svg { width: 95px; height: 95px; }
+
+    .pcard-body { padding: 20px 18px 18px; }
+    .pcard-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+    .pcard-name { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 700; color: var(--green-deep); line-height: 1.2; letter-spacing: -0.01em; }
+    .pcard-eco-badge { flex-shrink: 0; background: var(--green-pale); border: 1px solid var(--green-light); border-radius: 100px; padding: 4px 10px; font-size: 9.5px; font-weight: 700; color: var(--green-mid); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap; }
+
+    .pcard-specs { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 16px; }
+    .pcard-spec { background: var(--cream); border-radius: 10px; padding: 8px 10px; border: 1px solid rgba(58,158,86,0.08); }
+    .pcard-spec-label { font-size: 9.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-light); margin-bottom: 2px; }
+    .pcard-spec-value { font-size: 12.5px; font-weight: 600; color: var(--text-dark); line-height: 1.3; }
+
+    .pcard-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+    .pcard-feature-pill { display: flex; align-items: center; gap: 4px; background: var(--green-pale); border-radius: 100px; padding: 4px 10px; font-size: 8px; font-weight: 500; color: var(--green-mid); }
+    .pcard-feature-pill svg { width: 10px; height: 10px; flex-shrink: 0; }
+    .pcard-divider { height: 1px; background: rgba(58,158,86,0.10); margin-bottom: 16px; }
+
+    .pcard-cta { display: flex; align-items: center; justify-content: center; gap: 9px; width: 100%; padding: 14px 20px; background: linear-gradient(135deg, #3cb461 0%, #1f6b36 100%); box-shadow: 0 6px 20px rgba(42,107,60,0.30), inset 0 1px 0 rgba(255,255,255,0.18); color: white; border-radius: 12px; font-family: 'DM Sans', sans-serif; font-size: 0.925rem; font-weight: 700; border: none; cursor: pointer; letter-spacing: 0.02em; transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s; text-decoration: none; }
+    .pcard-cta svg { width: 19px; height: 19px; fill: white; flex-shrink: 0; }
+    .pcard-cta:active { transform: scale(0.96); box-shadow: 0 2px 8px rgba(42,107,60,0.20), inset 0 2px 6px rgba(0,0,0,0.15); }
+    .product-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        /* ✨ Premium feel */
+        filter: drop-shadow(0 12px 22px rgba(0,0,0,0.18));
+
+        transition: transform 0.3s ease;
+    }
+
+    .pcard:hover .product-img {
+        transform: scale(1.05);
+    }
+    .size-select-box {
+      position: relative;
+      cursor: pointer;
+      touch-action: manipulation;
+
+      /* ✨ PREMIUM BUTTON LOOK */
+      background: linear-gradient(180deg, #f3f6f2, #ecf4e9);
+      border: 1px solid rgba(58,158,86,0.18);
+      border-radius: 12px;
+      padding: 10px 12px;
+      align-items: center;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.8),
+        0 2px 6px rgba(22,61,31,0.08);
+
+      transition: all 0.2s ease;
+    }
+    .size-select-box::after {
+      content: "";
+      position: absolute;
+
+      right: 12px;              /* stays at end */
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+
+      width: 6px;
+      height: 6px;
+
+      border-right: 2px solid var(--green-mid);
+      border-bottom: 2px solid var(--green-mid);
+
+      opacity: 0.7;
+      transition: transform 0.25s ease, opacity 0.2s;
+    }
+    .size-select-box.active::after {
+      transform: translateY(-50%) rotate(-135deg); /* arrow flips up */
+      opacity: 1;
+    }
+    .size-select-box:active {
+      transform: scale(0.98);
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .size-dropdown {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      width: 98%;
+      max-width: 260px;
+      transform: translateX(-50%);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 12px 30px rgba(22,61,31,0.15);
+      border: 1px solid rgba(58,158,86,0.15);
+      padding: 8px;
+      display: none;
+      z-index: 10;
+      backdrop-filter: blur(6px);
+    }
+
+    .size-select-box.active .size-dropdown {
+      display: block;
+    }
+
+    .size-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px; padding: auto;
+    }
+
+    .size-grid span {
+      background: #f4f6f3;
+      border-radius: 12px;
+      padding: 8px 0;
+      font-size: 10px;
+      font-weight: 600;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap; /* important */
+      letter-spacing: 0.3px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .size-grid span:hover {
+      background: var(--green-pale);
+      transform: translateY(-1px);
+    }
+
+    .size-grid span.active {
+      background: linear-gradient(135deg, #2f7d44, #1f5c32);
+      box-shadow: 0 4px 10px rgba(31,92,50,0.25);
+      color: white;
+    }
+    @media (max-width: 480px) {
+    .size-dropdown {
+        width: 94%;
+        max-width: 240px;
+      }
+    }
+    /* Dark "More" card */
+    .coming-premium {
+        margin-top: 32px;
+        padding: 26px 22px;
+        border-radius: 20px;
+
+        /* ✨ Rich layered background */
+        background: 
+        radial-gradient(circle at 85% 20%, rgba(34,139,34,0.25), transparent 40%),
+        radial-gradient(circle at 10% 90%, rgba(76,175,80,0.18), transparent 50%),
+        linear-gradient(135deg, #e8f5e9, #d0ead5);
+
+        border: 1px solid rgba(34,139,34,0.15);
+
+        box-shadow:
+            0 12px 35px rgba(0,0,0,0.08),
+            inset 0 1px 0 rgba(255,255,255,0.7);
+
+        position: relative;
+        overflow: hidden;
+        padding: 22px 22px 26px;
+    }
+
+        /* subtle glow accent */
+    .coming-premium::after {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(circle, rgba(46,125,50,0.15), transparent 70%);
+        top: -30px;
+        right: -30px;
+    }
+    .coming-premium::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('leaf-texture.png');
+        opacity: 0.03;
+        pointer-events: none;
+        }
+    .coming-top {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+     .coming-pill {
+        font-size: 12px;
+        padding: 6px 12px;
+        border-radius: 100px;
+        background: linear-gradient(135deg, #c2ecc4, #96d799);
+        color: #1e4d21;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        font-weight: 600;
+        letter-spacing: 0.04em;
+    }
+
+    .coming-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #1b3b2a;
+        margin: 10px 0px 8px;
+    }
+
+    .coming-sub {
+        font-size: 0.85rem;
+        color: #5c6f62;
+        line-height: 1.6;
+        margin-bottom: 14px;
+    }
+
+    .coming-tags {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 14px;
+    }
+
+    .coming-tags span {
+        font-size: 11px;
+        padding: 6px 12px;
+        border-radius: 100px;
+        background: #ffffff;
+        border: 1px solid rgba(0,0,0,0.05);
+        color: #2e7d32;
+        font-weight: 500;
+    }
+
+    .coming-bottom {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .coming-btn {
+        padding: 12px 18px;
+        border-radius: 12px;
+
+        background: linear-gradient(135deg, #2e7d32, #1b5e20);
+        color: #fff;
+
+        font-size: 0.85rem;
+        font-weight: 600;
+        text-decoration: none;
+
+        box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+        transition: all 0.2s ease;
+    }
+
+    .coming-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+    }
+    .pcard.pcard-more { background: linear-gradient(145deg, var(--green-deep), #0e2914); border: 1px solid rgba(58,158,86,0.20); }
+    .pcard.pcard-more .pcard-img { background: rgba(255,255,255,0.04); }
+    .pcard.pcard-more .pcard-img::before { background: radial-gradient(ellipse at 50% 50%, rgba(58,158,86,0.15) 0%, transparent 70%); }
+    .pcard.pcard-more .pcard-name { color: #fff; }
+    .pcard.pcard-more .pcard-eco-badge { background: rgba(58,158,86,0.20); border-color: rgba(58,158,86,0.30); color: #90e8a8; }
+    .pcard.pcard-more .pcard-spec { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
+    .pcard.pcard-more .pcard-spec-label { color: rgba(255,255,255,0.45); }
+    .pcard.pcard-more .pcard-spec-value { color: rgba(255,255,255,0.85); }
+    .pcard.pcard-more .pcard-feature-pill { background: rgba(58,158,86,0.15); color: #90e8a8; }
+    .pcard.pcard-more .pcard-divider { background: rgba(255,255,255,0.08); }
+    .pcard.pcard-more .pcard-cta { background: rgba(255,255,255,0.10); box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 4px 16px rgba(0,0,0,0.20); border: 1px solid rgba(255,255,255,0.12); }
+    .pcard.pcard-more .pcard-cta:active { background: rgba(255,255,255,0.06); }
+
+    /* WHY */
+    #why { background: var(--white); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .why-card { background: var(--cream); border-radius: var(--radius-md); padding: 20px 16px; border: 1px solid rgba(58,158,86,0.10); transition: transform 0.2s; }
+    .why-card:active { transform: scale(0.99); }
+    .why-icon { width: 44px; height: 44px; border-radius: 12px; background: linear-gradient(135deg, var(--green-bright), var(--green-deep)); display: flex; align-items: center; justify-content: center; margin-bottom: 12px; box-shadow: 0 4px 14px rgba(42,107,60,0.25); }
+    .why-icon svg { width: 22px; height: 22px; fill: white; }
+    .why-card strong { display: block; font-size: 0.875rem; font-weight: 600; color: var(--text-dark); margin-bottom: 4px; line-height: 1.3; }
+    .why-card p { font-size: 0.75rem; color: var(--text-light); line-height: 1.5; }
+
+    /* CONTACT */
+    #contact { background: var(--cream); }
+    .contact-wa-block { background: linear-gradient(135deg, #1a4a2e, #163d1f); border-radius: var(--radius-lg); padding: 36px 24px; text-align: center; margin-bottom: 28px; position: relative; overflow: hidden; }
+    .contact-wa-block::before { content: ''; position: absolute; top: -40px; right: -40px; width: 160px; height: 160px; border-radius: 50%; background: rgba(58,158,86,0.15); filter: blur(30px); }
+    .contact-wa-block h2 { font-family: 'Fraunces', serif; font-size: 1.7rem; font-weight: 700; color: white; margin-bottom: 10px; position: relative; }
+    .contact-wa-block p { font-size: 0.875rem; color: rgba(255,255,255,0.65); margin-bottom: 24px; position: relative; }
+    .btn-wa-large { display: inline-flex; align-items: center; gap: 12px; background: var(--wa-green); color: white; padding: 17px 32px; border-radius: var(--radius-md); font-size: 1.05rem; font-weight: 700; box-shadow: 0 8px 28px rgba(37,211,102,0.40); transition: transform 0.15s; position: relative; }
+    .btn-wa-large:active { transform: scale(0.98); }
+    .btn-wa-large svg { width: 26px; height: 26px; fill: white; }
+    .contact-form-wrap { background: var(--white); border-radius: var(--radius-md); padding: 24px; border: 1px solid rgba(58,158,86,0.10); box-shadow: var(--shadow-card); }
+    .contact-form-wrap h3 { font-family: 'Fraunces', serif; font-size: 1.15rem; font-weight: 600; color: var(--green-deep); margin-bottom: 18px; }
+    .form-group { margin-bottom: 14px; }
+    .form-group input, .form-group textarea { width: 100%; padding: 13px 16px; border: 1.5px solid rgba(58,158,86,0.18); border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.9rem; color: var(--text-dark); background: var(--cream); outline: none; transition: border-color 0.2s; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: var(--text-light); }
+    .form-group input:focus, .form-group textarea:focus { border-color: var(--green-bright); background: var(--white); }
+    .form-group textarea { resize: none; height: 100px; }
+    .btn-submit { width: 100%; padding: 14px; background: linear-gradient(135deg, var(--green-bright), var(--green-deep)); color: white; border: none; border-radius: var(--radius-sm); font-family: 'DM Sans', sans-serif; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+    .btn-submit:active { opacity: 0.9; }
+
+    /* FOOTER */
+    #footer { background: var(--green-deep); padding: 36px 24px; color: rgba(255,255,255,0.75); }
+    .footer-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
+    .footer-brand-icon { width: 56px; height: 56px; border-radius: 14px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 5px; box-shadow: 0 6px 16px rgba(0,0,0,0.12); border: 1px solid rgba(0,0,0,0.05); flex-shrink: 0; }
+    .footer-brand-name { font-family: 'Fraunces', serif; font-size: 22px; font-weight: 700; color: #fff; margin-left: 4px; }
+    .footer-tagline { font-size: 0.8rem; line-height: 1.5; margin-bottom: 24px; color: rgba(255,255,255,0.55); }
+    .footer-divider { height: 1px; background: rgba(255,255,255,0.10); margin-bottom: 20px; }
+    .footer-info { font-size: 0.82rem; line-height: 1.9; }
+    .footer-info a { color: rgba(255,255,255,0.65); }
+    .footer-info-item { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 10px; }
+    .footer-info-item svg { width: 15px; height: 15px; fill: var(--green-bright); flex-shrink: 0; margin-top: 2px; }
+    .footer-bottom { margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.75rem; color: rgba(255,255,255,0.35); text-align: center; }
+
+    /* FLOAT WA */
+    #float-wa { position: fixed; bottom: 24px; right: 20px; z-index: 90; width: 58px; height: 58px; border-radius: 50%; background: var(--wa-green); display: flex; align-items: center; justify-content: center; box-shadow: 0 6px 24px rgba(37,211,102,0.45); transition: transform 0.2s; animation: floatPop 0.6s 6s cubic-bezier(0.34,1.56,0.64,1) both; }
+    @keyframes floatPop { from { transform: scale(0); } to { transform: scale(1); } }
+    #float-wa:active { transform: scale(0.93); }
+    #float-wa svg { width: 30px; height: 30px; fill: white; }
+    #float-wa::before { content: ''; position: absolute; inset: -6px; border-radius: 50%; border: 2px solid rgba(37,211,102,0.35); animation: ringRipple 2s 7s ease-out infinite; }
+    @keyframes ringRipple { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(1.4); opacity: 0; } }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* BUTTON INTERACTIONS */
+    .btn-wa, .btn-wa-large, .nav-wa-btn { transition: transform 0.18s cubic-bezier(0.4,0,0.2,1), box-shadow 0.18s, filter 0.18s; }
+    .btn-wa:hover, .btn-wa-large:hover, .nav-wa-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(37,211,102,0.45); }
+    .btn-wa:active, .btn-wa-large:active, .nav-wa-btn:active { transform: scale(0.96); box-shadow: 0 3px 10px rgba(37,211,102,0.25); filter: brightness(0.95); }
+    button, a { position: relative; overflow: hidden; }
+    .ripple { position: absolute; border-radius: 50%; background: rgba(255,255,255,0.4); transform: scale(0); animation: rippleAnim 600ms linear; pointer-events: none; }
+    @keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
+
+        /* ============================================================
+      RESPONSIVE — TABLETS & DESKTOPS ONLY (mobile-first additions)
+      Place at the bottom of the <style> block
+    ============================================================ */
+
+    /* ── Shared container utility ─────────────────────────── */
+    @media (min-width: 768px) {
+      #top-nav,
+      #hero,
+      section,
+      #footer {
+        padding-left: clamp(32px, 6vw, 80px);
+        padding-right: clamp(32px, 6vw, 80px);
+      }
+
+      #top-nav { padding-top: 16px; padding-bottom: 16px; }
+
+      /* centered max-width inner wrapper */
+      #hero > *,
+      section > * {
+        max-width: 1200px;
+      }
+    }
+
+    /* ── Global section max-width centering ───────────────── */
+    @media (min-width: 1200px) {
+      #top-nav,
+      #hero,
+      section,
+      #footer {
+        padding-left: calc((100vw - 1200px) / 2);
+        padding-right: calc((100vw - 1200px) / 2);
+      }
+
+      #impact,
+      #footer {
+        padding-left: calc((100vw - 1200px) / 2);
+        padding-right: calc((100vw - 1200px) / 2);
+      }
+    }
+
+    /* ── NAV ──────────────────────────────────────────────── */
+    @media (min-width: 768px) {
+      #top-nav {
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+
+      .nav-brand { font-size: 22px; }
+      .nav-brand-icon { width: 48px; height: 48px; }
+
+      .nav-wa-btn {
+        padding: 10px 20px;
+        font-size: 0.875rem;
+        gap: 8px;
+      }
+
+      .nav-wa-btn svg { width: 18px; height: 18px; }
+    }
+
+    /* ── HERO ─────────────────────────────────────────────── */
+    @media (min-width: 1024px) {
+      #hero {
+        display: grid;
+        grid-template-columns: 1fr 480px;
+        grid-template-rows: auto;
+        align-items: center;
+        column-gap: 64px;
+        padding-top: 120px;
+        padding-bottom: 80px;
+        min-height: 100svh;
+      }
+
+      .hero-blob.blob-1 { width: 420px; height: 420px; top: -100px; right: -80px; }
+      .hero-blob.blob-2 { width: 300px; height: 300px; bottom: 40px; left: -80px; }
+
+      .hero-eyebrow    { grid-column: 1; grid-row: 1; margin-bottom: 0; }
+      .hero-heading    { grid-column: 1; grid-row: 2; font-size: clamp(2.8rem, 4vw, 3.8rem); }
+      .hero-sub        { grid-column: 1; grid-row: 3; max-width: 460px; font-size: 1.05rem; }
+      .hero-trust-chips{ grid-column: 1; grid-row: 4; }
+      .hero-ctas       { grid-column: 1; grid-row: 5; flex-direction: row; gap: 12px; }
+      .hero-image-wrap { grid-column: 2; grid-row: 1 / 6; height: 100%; min-height: 360px; border-radius: 24px; align-self: center; }
+
+      /* Remove top fade gradient on desktop — not needed in grid layout */
+      .hero-image-wrap::before { display: none; }
+
+      .btn-wa, .btn-outline { flex: 0 0 auto; width: auto; padding: 16px 28px; }
+    }
+
+    /* ── CERTIFICATIONS ───────────────────────────────────── */
+    @media (min-width: 768px) {
+      #certifications { padding-top: 72px; padding-bottom: 72px; }
+
+      .cert-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+
+      .cert-card { flex-direction: column; align-items: flex-start; gap: 14px; padding: 24px 20px; }
+      .cert-card-badge { align-self: flex-end; }
+    }
+
+    @media (min-width: 1024px) {
+      .cert-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(22,61,31,0.14);
+      }
+    }
+
+    /* ── IMPACT ───────────────────────────────────────────── */
+    @media (min-width: 768px) {
+      #impact { padding-top: 80px; padding-bottom: 80px; }
+
+      .impact-stats {
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 640px;
+        margin: 0 auto;
+        gap: 16px;
+      }
+
+      .impact-sub { max-width: 480px; font-size: 1rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .impact-heading { font-size: clamp(2.4rem, 4vw, 3.4rem); }
+      .impact-stat-card .stat-num { font-size: 2.2rem; }
+    }
+
+    /* ── PRODUCTS ─────────────────────────────────────────── */
+    @media (min-width: 768px) {
+      #products { padding-top: 80px; padding-bottom: 80px; }
+
+      .products-stack {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+
+      /* "Coming Soon" card spans full width */
+      .coming-premium { grid-column: 1 / -1; }
+    }
+
+    @media (min-width: 1200px) {
+      .products-stack {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      .pcard-img { height: 260px; }
+
+      .pcard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 48px rgba(22,61,31,0.14), 0 2px 8px rgba(22,61,31,0.08);
+      }
+    }
+
+    /* ── WHY CHOOSE US ────────────────────────────────────── */
+    @media (min-width: 768px) {
+      .why-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 18px;
+      }
+
+      .why-card { padding: 24px 18px; }
+    }
+
+    @media (min-width: 1024px) {
+      .why-card:hover { transform: translateY(-3px); }
+    }
+
+    /* ── CONTACT ──────────────────────────────────────────── */
+    @media (min-width: 1024px) {
+      #contact {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      /* Side-by-side layout: WA block left, form right */
+      #contact > *:not(.section-eyebrow):not(.section-heading) {
+        /* handled below */
+      }
+
+      /* Use a grid wrapper for the two blocks */
+      #contact .contact-wa-block,
+      #contact .contact-form-wrap {
+        margin-bottom: 0;
+      }
+
+      /* Wrap them in a grid using adjacent sibling */
+      .contact-wa-block {
+        /* We'll use the section as the grid parent below */
+      }
+
+      #contact {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+
+      /* Make the last two children (WA block + form) sit side by side */
+      #contact .section-eyebrow { grid-column: 1; }
+      #contact .section-heading  { grid-column: 1; }
+      #contact .contact-wa-block { grid-column: 1; }
+      #contact .contact-form-wrap { grid-column: 1; }
+    }
+
+    @media (min-width: 1024px) {
+      /* ✅ Proper two-column contact layout */
+      #contact {
+        display: block; /* reset */
+      }
+
+      .contact-grid-inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        align-items: start;
+        margin-top: 0;
+      }
+
+      .contact-wa-block { margin-bottom: 0; height: 100%; }
+      .contact-form-wrap { margin-bottom: 0; }
+
+      .contact-wa-block h2 { font-size: 2rem; }
+    }
+
+    /* ── FOOTER ───────────────────────────────────────────── */
+    @media (min-width: 768px) {
+      #footer {
+        padding-top: 52px;
+        padding-bottom: 40px;
+      }
+
+      .footer-inner-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        align-items: start;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      #footer .footer-bottom { margin-top: 32px; }
+    }
+
+    /* ── SECTION VERTICAL RHYTHM (tablet+) ───────────────── */
+    @media (min-width: 768px) {
+      section { padding-top: 80px; padding-bottom: 80px; }
+      .section-heading { font-size: clamp(2rem, 3.5vw, 2.6rem); }
+      .section-sub { max-width: 520px; font-size: 0.95rem; margin-bottom: 44px; }
+    }
+
+    /* ── POPUP — wider on desktop ─────────────────────────── */
+    @media (min-width: 600px) {
+      #cert-popup { max-width: 420px; padding: 40px 36px 32px; }
+      #cert-popup h2 { font-size: 1.6rem; }
+      .cert-image-box { height: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- POPUP -->
+  <div id="cert-overlay" role="dialog" aria-modal="true" aria-label="CPCB Certification">
+    <div id="cert-popup">
+      <button id="cert-close" aria-label="Close certification popup">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="cert-brand">
+        <div class="cert-logo-wrap"><img src="logo.png" alt="Sai Vedha Eco"></div>
+        <div class="cert-brand-text"><span class="brand-main">Sai Vedha Eco</span></div>
+      </div>
+      <div class="cert-badge-line"><span></span> Verified Certification</div>
+      <h2>We are ISO 17088 Certified</h2>
+      <p>Our products meet all government standards for compostable and biodegradable packaging materials.</p>
+      <div class="cert-image-box"><img src="iso-certificate.jpg" alt="ISO Certificate"></div>
+      <button class="cert-btn-primary" onclick="window.open('iso.pdf','_blank')">🏅 View Certificate</button>
+      <div class="cert-timer-bar"><div class="cert-timer-fill"></div></div>
+      <p class="cert-timer-label">Auto-closing in 5 seconds…</p>
+    </div>
+  </div>
+  <div id="cert-full-view" class="cert-full-view">
+    <span class="cert-close" onclick="document.getElementById('cert-full-view').style.display='none'">✕</span>
+    <img src="iso-certificate.jpg" alt="ISO Certificate">
+  </div>
+
+  <!-- NAV -->
+  <nav id="top-nav">
+    <div class="nav-brand">
+      <div class="nav-brand-icon">
+        <img src="logo.png" style="width:100%;height:100%;object-fit:contain;filter:contrast(1.1) brightness(1.05);">
+      </div>
+      Sai Vedha Eco
+    </div>
+    <a href="https://wa.me/917799334484?text=Hi%2C%20I%20want%20to%20know%20about%20your%20biodegradable%20carry%20bags" class="nav-wa-btn" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+    <div class="hero-eyebrow">CPCB &amp; ISO 17088 Certified</div>
+    <h1 class="hero-heading">Nature's way<br/>of <em>carrying</em><br/>the future.</h1>
+    <p class="hero-sub">Certified biodegradable carry bags that decompose completely — no microplastics, no guilt.</p>
+    <div class="hero-trust-chips">
+      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>CPCB Approved</div>
+      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M9 12l-4 8 4-2 3 2 3-2 4 2-4-8"/></svg>ISO 17088</div>
+      <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>APPCB Approved</div>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://wa.me/917799334484?text=Hello%2C%20I%20want%20to%20place%20a%20bulk%20order%20for%20eco%20bags" class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Get Quote on WhatsApp
+      </a>
+      <a href="#certifications" class="btn-outline">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M9 12l-4 8 4-2 3 2 3-2 4 2-4-8"/></svg>
+        View Certifications
+      </a>
+    </div> 
+
+    <!-- HERO PRODUCT VISUAL — REDESIGNED -->
+    <!-- COMPLIANCE DOCUMENTS CARD -->
+    <div class="hero-image-wrap">
+      <a href="compliance-documents.pdf" target="_blank" rel="noopener" class="compliance-card" aria-label="Open compliance documents">
+        <div class="compliance-left">
+          <div class="compliance-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="9" y1="13" x2="15" y2="13"/>
+              <line x1="9" y1="17" x2="13" y2="17"/>
+              <line x1="9" y1="9" x2="10" y2="9"/>
+            </svg>
+          </div>
+          <div class="compliance-text">
+            <div class="compliance-label">PDF &bull; Verified</div>
+            <div class="compliance-title">Compliance Documents</div>
+            <div class="compliance-subtitle">Tap to view certifications, approvals &amp; company documents</div>
+          </div>
+        </div>
+        <div class="compliance-arrow">
+          <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS — CLICKABLE CARDS -->
+  <section id="certifications">
+    <div class="section-eyebrow">Certifications</div>
+    <h2 class="section-heading">Trusted by the<br/>Government &amp; Industry</h2>
+    <p class="section-sub">Every bag we make passes rigorous standards for compostability and safety.</p>
+    <div class="cert-cards">
+      <a href="cpcb.pdf" target="_blank" rel="noopener" class="cert-card reveal">
+        <div class="cert-card-icon green-grad">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="cert-card-body">
+          <strong>CPCB Approved</strong>
+          <p>Central Pollution Control Board certified compostable products</p>
+        </div>
+        <span class="cert-card-badge">Govt.</span>
+      </a>
+      <a href="iso.pdf" target="_blank" rel="noopener" class="cert-card reveal reveal-delay-1">
+        <div class="cert-card-icon blue-grad">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="8" r="4"/><path d="M9 12l-4 8 4-2 3 2 3-2 4 2-4-8"/><path d="M12 4v1M4.93 7.93l.7.7M19.07 7.93l-.7.7"/></svg>
+        </div>
+        <div class="cert-card-body">
+          <strong>ISO 17088:2021</strong>
+          <p>International standard for specifications of compostable plastics</p>
+        </div>
+        <span class="cert-card-badge">ISO</span>
+      </a>
+      <a href="cipet.pdf" target="_blank" rel="noopener" class="cert-card reveal reveal-delay-2">
+        <div class="cert-card-icon amber-grad">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v11m0 0H5a2 2 0 01-2-2V9m6 5h10a2 2 0 002-2V9m-6 9v3m-3 0h6"/></svg>
+        </div>
+        <div class="cert-card-body">
+          <strong>APPCB Approved</strong>
+            <p>Andhra Pradesh Pollution Control Board certified for eco compliance</p>
+        </div>
+        <span class="cert-card-badge">Govt</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section id="impact">
+    <div class="impact-inner">
+      <div class="impact-leaf-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 8C8 10 5.9 16.17 3.82 19.34L5 21l1-1c1-1 2.36-2.45 4-3.45C11 15.5 13 15 17 8zM17 8c-.5 3-2.36 5.45-5 7"/></svg>
+      </div>
+      <h2 class="impact-heading reveal">100% Compostable.<br/><em>Not a plastic bag.</em></h2>
+      <p class="impact-sub reveal reveal-delay-1">Our bags break down completely within 180 days in composting conditions — leaving no harmful residue, no microplastics.</p>
+      <div class="impact-stats reveal reveal-delay-2">
+        <div class="impact-stat-card"><span class="stat-num">180</span><span class="stat-label">Days to fully<br/>decompose</span></div>
+        <div class="impact-stat-card"><span class="stat-num">0%</span><span class="stat-label">Micro-<br/>plastics left</span></div>
+        <div class="impact-stat-card"><span class="stat-num">100%</span><span class="stat-label">Plant-based<br/>materials</span></div>
+        <div class="impact-stat-card"><span class="stat-num">3×</span><span class="stat-label">Stronger than<br/>regular bags</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS — REDESIGNED -->
+  <section id="products">
+    <div class="section-eyebrow">Our Products</div>
+    <h2 class="section-heading">Bags built for<br/>every purpose</h2>
+    <p class="section-sub">100% biodegradable. Available in bulk with custom printing.</p>
+
+    <div class="products-stack">
+
+      <!-- D Cut Carry Bags -->
+      <div class="pcard reveal">
+        <div class="pcard-img c-green">
+          <span class="pcard-img-badge hot">Bestseller</span>
+         <img src="images/dcut.png" alt="D Cut Carry Bag" class="product-img">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-header">
+            <h3 class="pcard-name">D Cut Carry Bags</h3>
+            <span class="pcard-eco-badge">Biodegradable</span>
+          </div>
+          <div class="pcard-specs">
+            <div class="pcard-spec"><div class="pcard-spec-label">GSM</div><div class="pcard-spec-value">20 – 120 GSM</div></div>
+            <div class="pcard-spec size-select-box" onclick="toggleSize(this)">
+  <div class="pcard-spec-label">SIZE</div>
+  <div class="pcard-spec-value">Select Size </div>
+
+      <!-- dropdown -->
+      <div class="size-dropdown">
+        <div class="size-grid">
+          <span onclick="selectSize(event, this)">8 x 10</span>
+          <span onclick="selectSize(event, this)">10 x 12</span>
+          <span onclick="selectSize(event, this)">11 x 14</span>
+          <span onclick="selectSize(event, this)">13 x 16</span>
+          <span onclick="selectSize(event, this)">16 x 20</span>
+          <span onclick="selectSize(event, this)">17 x 23</span>
+          <span onclick="selectSize(event, this)">20 x 24</span>
+          <span onclick="selectSize(event, this)">24 x 30</span>
+        </div>
+      </div>
+    </div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Microns</div><div class="pcard-spec-value">Customizable</div></div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Min Order</div><div class="pcard-spec-value">100 Kg</div></div>
+          </div>
+          <div class="pcard-features">
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Custom Printing</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Plant-Based</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Heavy-Duty</span>
+          </div>
+          <div class="pcard-divider"></div>
+          <a href="#" class="pcard-cta" onclick="sendQuote(this)">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Quote on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- W Cut Carry Bags -->
+      <div class="pcard reveal reveal-delay-1">
+        <div class="pcard-img c-teal">
+          <span class="pcard-img-badge">Popular</span>
+         <img src="images/wcut.png" alt="W Cut Carry Bag" class="product-img">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-header">
+            <h3 class="pcard-name">W Cut Carry Bags</h3>
+            <span class="pcard-eco-badge">Biodegradable</span>
+          </div>
+          <div class="pcard-specs">
+            <div class="pcard-spec"><div class="pcard-spec-label">GSM</div><div class="pcard-spec-value">20 – 120 GSM</div></div>
+            <div class="pcard-spec size-select-box" onclick="toggleSize(this)">
+          <div class="pcard-spec-label">SIZE</div>
+          <div class="pcard-spec-value">Select Size</div>
+
+          <div class="size-dropdown">
+            <div class="size-grid">
+              <span onclick="selectSize(event, this)">8 x 10</span>
+              <span onclick="selectSize(event, this)">9 x 12</span>
+              <span onclick="selectSize(event, this)">10 x 14</span>
+              <span onclick="selectSize(event, this)">12 x 16</span>
+              <span onclick="selectSize(event, this)">12 x 18</span>
+              <span onclick="selectSize(event, this)">14 x 19</span>
+              <span onclick="selectSize(event, this)">16 x 20</span>
+            </div>
+          </div>
+        </div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Microns</div><div class="pcard-spec-value">Customizable</div></div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Min Order</div><div class="pcard-spec-value">100 Kg</div></div>
+          </div>
+          <div class="pcard-features">
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Custom Printing</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Plant-Based</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Heavy-Duty</span>
+          </div>
+          <div class="pcard-divider"></div>
+          <a href="#" class="pcard-cta" onclick="sendQuote(this)">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Quote on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Garbage Bags -->
+      <div class="pcard reveal reveal-delay-2">
+        <div class="pcard-img c-olive">
+          <span class="pcard-img-badge">Household</span>
+          <img src="images/garbage.png" alt="Garbage Bags" class="product-img">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-header">
+            <h3 class="pcard-name">Garbage Bags</h3>
+            <span class="pcard-eco-badge">Biodegradable</span>
+          </div>
+          <div class="pcard-specs">
+            <div class="pcard-spec"><div class="pcard-spec-label">GSM</div><div class="pcard-spec-value">40 – 120 GSM</div></div>
+            <div class="pcard-spec size-select-box" onclick="toggleSize(this)">
+            <div class="pcard-spec-label">SIZE</div>
+            <div class="pcard-spec-value">Select Size</div>
+
+            <div class="size-dropdown">
+              <div class="size-grid">
+                <span onclick="selectSize(event, this)">17 x 19</span>
+                <span onclick="selectSize(event, this)">19 x 21</span>
+                <span onclick="selectSize(event, this)">24 x 32</span>
+                <span onclick="selectSize(event, this)">30 x 37</span>
+                <span onclick="selectSize(event, this)">30 x 50</span>
+              </div>
+            </div>
+          </div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Microns</div><div class="pcard-spec-value">Customizable</div></div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Min Order</div><div class="pcard-spec-value">100 Kg</div></div>
+          </div>
+          <div class="pcard-features">
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Custom Printing</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Plant-Based</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Heavy-Duty</span>
+          </div>
+          <div class="pcard-divider"></div>
+          <a href="#" class="pcard-cta" onclick="sendQuote(this)">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Quote on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- Grocery Bags -->
+      <div class="pcard reveal reveal-delay-3">
+        <div class="pcard-img c-sage">
+          <span class="pcard-img-badge">Retail</span>
+          <img src="images/grocery.png" alt="Grocery Bags" class="product-img">
+        </div>
+        <div class="pcard-body">
+          <div class="pcard-header">
+            <h3 class="pcard-name">Grocery Bags</h3>
+            <span class="pcard-eco-badge">Biodegradable</span>
+          </div>
+          <div class="pcard-specs">
+            <div class="pcard-spec"><div class="pcard-spec-label">GSM</div><div class="pcard-spec-value">20 – 80 GSM</div></div>
+            <div class="pcard-spec size-select-box" onclick="toggleSize(this)">
+            <div class="pcard-spec-label">SIZE</div>
+            <div class="pcard-spec-value">Select Size</div>
+
+            <div class="size-dropdown">
+              <div class="size-grid">
+                <span onclick="selectSize(event, this)">100 gm</span>
+                <span onclick="selectSize(event, this)">250 gm</span>
+                <span onclick="selectSize(event, this)">500gm</span>
+                <span onclick="selectSize(event, this)">1 Kg</span>
+                <span onclick="selectSize(event, this)">2 Kg</span>
+                <span onclick="selectSize(event, this)">3 Kg</span>
+                <span onclick="selectSize(event, this)">5 Kg</span>
+              </div>
+            </div>
+          </div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Microns</div><div class="pcard-spec-value">Customizable</div></div>
+            <div class="pcard-spec"><div class="pcard-spec-label">Min Order</div><div class="pcard-spec-value">100 Kg</div></div>
+          </div>
+          <div class="pcard-features">
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Custom Printing</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Plant-Based</span>
+            <span class="pcard-feature-pill"><svg viewBox="0 0 10 10" fill="currentColor"><circle cx="5" cy="5" r="4"/></svg>Heavy-Duty</span>
+          </div>
+          <div class="pcard-divider"></div>
+          <a href="#" class="pcard-cta" onclick="sendQuote(this)">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Quote on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <!-- More Varieties (dark card) -->
+       <div class="coming-premium reveal">
+
+        <div class="coming-top">
+            <span class="coming-pill">Coming Soon</span>
+        </div>
+
+        <h3 class="coming-title">Expanding Our Product Line</h3>
+
+        <p class="coming-sub">
+            Medical bags, courier packaging, custom orders and advanced eco solutions 
+            are launching soon to serve more industries.
+        </p>
+
+        <div class="coming-tags">
+            <span>Medical</span>
+            <span>Courier</span>
+            <span>Bio Plastics</span>
+            <span>Custom Orders</span>
+        </div>
+
+        <div class="coming-bottom">
+            <a href="https://wa.me/917799334484?text=Hi%2C%20I%20want%20details%20about%20upcoming%20products"
+            class="coming-btn" target="_blank">
+            Ask Details
+            </a>
+        </div>
+
+       </div> 
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why">
+    <div class="section-eyebrow">Why Choose Us</div>
+    <h2 class="section-heading">Built on trust,<br/>backed by science</h2>
+    <p class="section-sub">Not just a bag — a commitment to the planet.</p>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><strong>Government Certified</strong><p>CPCB, ISO &amp; APPCB approved</p></div>
+      <div class="why-card reveal reveal-delay-1"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div><strong>Custom Printing</strong><p>Your brand logo on every bag</p></div>
+      <div class="why-card reveal reveal-delay-2"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></div><strong>Bulk Orders</strong><p>Min. order-friendly pricing</p></div>
+      <div class="why-card reveal reveal-delay-3"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><strong>Fast Delivery</strong><p>Pan-India shipping on time</p></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-eyebrow">Get in Touch</div>
+    <h2 class="section-heading">Ready to make<br/>the switch?</h2>
+     <div class="contact-grid-inner">
+    <div class="contact-wa-block">
+      <h2>Order on WhatsApp Now</h2>
+      <p>Talk directly with us — get price, samples &amp; bulk quotes fast.</p>
+      <a href="https://api.whatsapp.com/send?phone=917799334484&text=Hi%2C%20I%20need%20pricing%20details%20for%20bulk%20compostable%20carry%20bags" class="btn-wa-large" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+    </div>
+    <div class="contact-form-wrap reveal">
+      <h3>Or drop us a message</h3>
+      <div class="form-group"><input type="text" placeholder="Your Name" autocomplete="name"/></div>
+      <div class="form-group"><input type="tel" placeholder="Phone Number" autocomplete="tel"/></div>
+      <div class="form-group"><textarea placeholder="Your message or enquiry…"></textarea></div>
+      <button class="btn-submit" type="button" onclick="submitForm(this)">Send Enquiry</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-brand">
+      <div class="footer-brand-icon"><img src="logo.png" alt="Company Logo" style="width:100%;height:100%;object-fit:contain;"></div>
+      <span class="footer-brand-name">Sai Vedha Eco</span>
+    </div>
+    <p class="footer-tagline">Certified biodegradable products manufacturers<br/>committed to a plastic-free tomorrow.</p>
+    <div class="footer-divider"></div>
+    <div class="footer-info">
+      <div class="footer-info-item">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        <a href="https://maps.app.goo.gl/WcaPX7P43p4345qDA">Darsi, Prakasam Dt, Andhra Pradesh - 523247</a>
+      </div>
+      <div class="footer-info-item">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        <a href="tel:+917799334484">+91 7799334484</a>
+      </div>
+    </div>
+    <div class="footer-info-item" style="margin-top:4px;">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm5 5a5 5 0 110 10 5 5 0 010-10zm6.5-.9a1.4 1.4 0 110 2.8 1.4 1.4 0 010-2.8z" fill="var(--green-bright)"/></svg>
+      <a href="https://www.instagram.com/sai_vedha_eco_products?igsh=MXY0bjNrN2RtbTVoOQ==" style="color:rgba(255,255,255,0.65);">sai_vedha_eco_products</a>
+    </div>
+    <div class="footer-bottom">Copyright © 2026 Sai Vedha Eco. All rights reserved.<br/>| *T&amp;C apply.</div>
+  </footer>
+
+  <!-- FLOATING WA -->
+  <script>
+    // POPUP
+    const overlay = document.getElementById('cert-overlay');
+    let autoCloseTimer;
+    function closeCertPopup() {
+      overlay.classList.add('fade-out');
+      overlay.addEventListener('animationend', () => { overlay.style.display = 'none'; }, { once: true });
+      clearTimeout(autoCloseTimer);
+    }
+    autoCloseTimer = setTimeout(closeCertPopup, 5000);
+    document.getElementById('cert-close').addEventListener('click', closeCertPopup);
+    overlay.addEventListener('click', function(e) { if (e.target === overlay) closeCertPopup(); });
+
+    // NAV SHADOW
+    const nav = document.getElementById('top-nav');
+    window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 10); }, { passive: true });
+
+    // SCROLL REVEAL
+    const revealEls = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+    }, { threshold: 0.10 });
+    revealEls.forEach(el => observer.observe(el));
+
+    // FORM → WHATSAPP
+    function submitForm(btn) {
+      const section = btn.closest('.contact-form-wrap');
+      const name  = section.querySelector('input[type="text"]').value.trim();
+      const phone = section.querySelector('input[type="tel"]').value.trim();
+      const msg   = section.querySelector('textarea').value.trim();
+      if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+      const text = encodeURIComponent(`Hello Sai Vedha Eco!\n\nName: ${name}\nPhone: ${phone}\nMessage: ${msg || '—'}`);
+      window.open(`https://wa.me/917799334484?text=${text}`, '_blank');
+    }
+    function toggleSize(el) {
+      el.classList.toggle("active");
+    }
+
+    function selectSize(e, item) {
+      e.stopPropagation();
+
+      const box = item.closest(".size-select-box");
+      const value = box.querySelector(".pcard-spec-value");
+
+      value.innerText = item.innerText;
+
+      // highlight selected
+      box.querySelectorAll(".size-grid span").forEach(s => s.classList.remove("active"));
+      item.classList.add("active");
+
+      // close dropdown
+      box.classList.remove("active");
+    }
+
+    // RIPPLE
+    document.querySelectorAll('a, button').forEach(el => {
+      el.addEventListener('click', function(e) {
+        const circle = document.createElement('span');
+        const d = Math.max(this.clientWidth, this.clientHeight);
+        circle.style.width = circle.style.height = `${d}px`;
+        circle.style.left = `${e.clientX - this.getBoundingClientRect().left - d/2}px`;
+        circle.style.top  = `${e.clientY - this.getBoundingClientRect().top  - d/2}px`;
+        circle.classList.add('ripple');
+        const existing = this.getElementsByClassName('ripple')[0];
+        if (existing) existing.remove();
+        this.appendChild(circle);
+      });
+    });
+    document.addEventListener("click", function(e) {
+     document.querySelectorAll(".size-select-box").forEach(box => {
+        if (!box.contains(e.target)) {
+          box.classList.remove("active");
+        }
+      });
+    });
+    function sendQuote(btn) {
+    event.preventDefault(); 
+    const card = btn.closest(".pcard");
+
+    const product = card.querySelector(".pcard-name").innerText;
+
+    let size = card.querySelector(".size-select-box .pcard-spec-value").innerText;
+    if (size === "Select Size") size = "Not specified";
+
+    const gsm = card.querySelector(".pcard-spec:nth-child(1) .pcard-spec-value").innerText;
+
+    const text = encodeURIComponent(
+  `Hello Sai Vedha Eco!
+
+  Product: ${product}
+  Size: ${size}
+  GSM: ${gsm}
+
+  I want to get a quote.`
+    );
+
+    window.open(`https://wa.me/917799334484?text=${text}`, "_blank");
+  }
+  </script>
+</body>
+</html>
