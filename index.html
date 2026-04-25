@@ -1323,4 +1323,45 @@
   }
   </script>
 </body>
+h = circle.style.height = `${d}px`;
+        circle.style.left = `${e.clientX - this.getBoundingClientRect().left - d/2}px`;
+        circle.style.top  = `${e.clientY - this.getBoundingClientRect().top  - d/2}px`;
+        circle.classList.add('ripple');
+        const existing = this.getElementsByClassName('ripple')[0];
+        if (existing) existing.remove();
+        this.appendChild(circle);
+      });
+    });
+    document.addEventListener("click", function(e) {
+     document.querySelectorAll(".size-select-box").forEach(box => {
+        if (!box.contains(e.target)) {
+          box.classList.remove("active");
+        }
+      });
+    });
+    function sendQuote(btn) {
+    event.preventDefault(); 
+    const card = btn.closest(".pcard");
+
+    const product = card.querySelector(".pcard-name").innerText;
+
+    let size = card.querySelector(".size-select-box .pcard-spec-value").innerText;
+    if (size === "Select Size") size = "Not specified";
+
+    const gsm = card.querySelector(".pcard-spec:nth-child(1) .pcard-spec-value").innerText;
+
+    const text = encodeURIComponent(
+  `Hello Sai Vedha Eco!
+
+  Product: ${product}
+  Size: ${size}
+  GSM: ${gsm}
+
+  I want to get a quote.`
+    );
+
+    window.open(`https://wa.me/917799334484?text=${text}`, "_blank");
+  }
+  </script>
+</body>
 </html>
