@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CPCB Certified Biodegradable Eco-Products Manufacturer. 100% Compostable Carry Bags." />
-  <title>Sai Vedha Eco — Certified Biodegradable Products</title>
+  <title>Biodegradable Carry Bags in India | Sai Vedha Eco</title>
+
+  <meta name="description" content="Sai Vedha Eco offers eco-friendly biodegradable carry bags in India. CPCB approved, ISO certified, sustainable packaging solutions for businesses.">
+
+  <meta name="keywords" content="biodegradable bags India, eco friendly carry bags, compostable bags, sustainable packaging India">
+
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Sai Vedha Eco | Biodegradable Carry Bags">
+  <meta property="og:description" content="Eco-friendly biodegradable carry bags. CPCB approved & ISO certified products.">
+  <meta property="og:image" content="https://saivedhaeco.in/logo.png">
+  <meta property="og:url" content="https://saivedhaeco.in">
+  <meta property="og:type" content="website">
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -817,7 +825,7 @@
   <nav id="top-nav">
     <div class="nav-brand">
       <div class="nav-brand-icon">
-        <img src="logo.png" style="width:100%;height:100%;object-fit:contain;filter:contrast(1.1) brightness(1.05);">
+        <img src="logo.png" style="width:100%;height:100%;object-fit:contain;filter:contrast(1.1) brightness(1.05);" alt="Sai Vedha Eco logo - biodegradable carry bags manufacturer in India">
       </div>
       Sai Vedha Eco
     </div>
@@ -832,7 +840,7 @@
     <div class="hero-blob blob-2"></div>
     <div class="hero-eyebrow">CPCB &amp; ISO 17088 Certified</div>
     <h1 class="hero-heading">Nature's way<br/>of <em>carrying</em><br/>the future.</h1>
-    <p class="hero-sub">Certified biodegradable carry bags that decompose completely — no microplastics, no guilt.</p>
+    <p class="hero-sub">Certified biodegradable carry bags in India that decompose completely without harming the environment. — no microplastics, Eco-friendly, no guilt.</p>
     <div class="hero-trust-chips">
       <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>CPCB Approved</div>
       <div class="trust-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M9 12l-4 8 4-2 3 2 3-2 4 2-4-8"/></svg>ISO 17088</div>
@@ -1151,10 +1159,11 @@
        </div> 
   </section>
 
+ 
   <!-- WHY CHOOSE US -->
   <section id="why">
     <div class="section-eyebrow">Why Choose Us</div>
-    <h2 class="section-heading">Built on trust,<br/>backed by science</h2>
+    <h2 class="section-heading">Biodegradable Bags Manufacturer in India</h2>
     <p class="section-sub">Not just a bag — a commitment to the planet.</p>
     <div class="why-grid">
       <div class="why-card reveal"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><strong>Government Certified</strong><p>CPCB, ISO &amp; APPCB approved</p></div>
@@ -1163,6 +1172,7 @@
       <div class="why-card reveal reveal-delay-3"><div class="why-icon"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><strong>Fast Delivery</strong><p>Pan-India shipping on time</p></div>
     </div>
   </section>
+  
 
   <!-- CONTACT -->
   <section id="contact">
@@ -1273,6 +1283,47 @@
         const circle = document.createElement('span');
         const d = Math.max(this.clientWidth, this.clientHeight);
         circle.style.width = circle.style.height = `${d}px`;
+        circle.style.left = `${e.clientX - this.getBoundingClientRect().left - d/2}px`;
+        circle.style.top  = `${e.clientY - this.getBoundingClientRect().top  - d/2}px`;
+        circle.classList.add('ripple');
+        const existing = this.getElementsByClassName('ripple')[0];
+        if (existing) existing.remove();
+        this.appendChild(circle);
+      });
+    });
+    document.addEventListener("click", function(e) {
+     document.querySelectorAll(".size-select-box").forEach(box => {
+        if (!box.contains(e.target)) {
+          box.classList.remove("active");
+        }
+      });
+    });
+    function sendQuote(btn) {
+    event.preventDefault(); 
+    const card = btn.closest(".pcard");
+
+    const product = card.querySelector(".pcard-name").innerText;
+
+    let size = card.querySelector(".size-select-box .pcard-spec-value").innerText;
+    if (size === "Select Size") size = "Not specified";
+
+    const gsm = card.querySelector(".pcard-spec:nth-child(1) .pcard-spec-value").innerText;
+
+    const text = encodeURIComponent(
+  `Hello Sai Vedha Eco!
+
+  Product: ${product}
+  Size: ${size}
+  GSM: ${gsm}
+
+  I want to get a quote.`
+    );
+
+    window.open(`https://wa.me/917799334484?text=${text}`, "_blank");
+  }
+  </script>
+</body>
+h = circle.style.height = `${d}px`;
         circle.style.left = `${e.clientX - this.getBoundingClientRect().left - d/2}px`;
         circle.style.top  = `${e.clientY - this.getBoundingClientRect().top  - d/2}px`;
         circle.classList.add('ripple');
